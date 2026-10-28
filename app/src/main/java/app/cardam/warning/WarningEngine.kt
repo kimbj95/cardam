@@ -346,10 +346,12 @@ class WarningEngine(
         context.assets.open("demo/answer_$name.pcm").use { it.readBytes() }
     }.onFailure { log("no demo answer '$name'") }.getOrNull()
 
+    /** One line for tests and the demo video's vehicle panel; lists have no spaces so `key=value` splits cleanly. */
     fun statusLine() =
-        "gear=${state.gear} speed=${"%.0f".format(state.speedKmh)} lights=${state.lights.keys} pending=${pending.keys} " +
-            "open=${store.openEvents().map { it.type }} events=${store.events.size} outside=${outsideTempC()} " +
-            "odometer=${state.odometerKm} range=${state.rangeKm} vin=${state.vin} driveStartedAt=${store.driveStartedAt} navi=${navi.status}"
+        "gear=${state.gear} speed=${"%.0f".format(state.speedKmh)} lights=${state.lights.keys.joinToString(",")} " +
+            "pending=${pending.keys.joinToString(",")} open=${store.openEvents().joinToString(",") { it.type }} " +
+            "events=${store.events.size} outside=${outsideTempC()} driven=${minutesDriven() ?: -1} " +
+            "odometer=${state.odometerKm} range=${state.rangeKm} vin=${state.vin} navi=${navi.status}"
 
     private companion object {
         const val SAMPLE_MS = 500L
