@@ -1,0 +1,9 @@
+Repair shop locations (assets/shops/repair_shops.json)
+
+© OpenStreetMap contributors
+Data is available under the Open Database License (ODbL) 1.0.
+https://www.openstreetmap.org/copyright
+https://opendatacommons.org/licenses/odbl/1-0/
+
+Extracted on 2026-10-28: every feature tagged shop=car_repair in South Korea that has a name,
+with Bluehands branch names normalized for speech.

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">카담</string>
+    <string name="tagline">차가 건네는 말</string>
+    <string name="notification_channel">경고등 안내</string>
+    <string name="notification_text">경고등을 살피고 켜지면 목소리로 알려 드려요</string>
+    <string name="start_channel">안내 시작 알림</string>
+    <string name="start_title">카담을 시작할까요?</string>
+    <string name="start_text">휴대폰이 연결됐어요. 시작하면 경고등을 다시 살펴요.</string>
+    <string name="start_action">시작</string>
+    <string name="start_voice">휴대폰이 연결됐어요. 알림 센터에서 시작을 누르면 카담이 경고등을 다시 살펴요.</string>
+    <string name="started_by_phone">휴대폰이 연결돼서 카담을 다시 켰어요.</string>
+    <string name="started_by_prompt">카담을 다시 시작했어요.</string>
+</resources>

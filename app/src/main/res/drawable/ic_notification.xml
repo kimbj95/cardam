@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Status bar and notification icon: a speech bubble with a pulse line cut out, single color as Android requires. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M12,2.5C6.75,2.5 2.5,6.3 2.5,11C2.5,13.4 3.6,15.6 5.4,17.1L4.2,21.5L9,19.1C9.95,19.37 10.96,19.5 12,19.5C17.25,19.5 21.5,15.7 21.5,11C21.5,6.3 17.25,2.5 12,2.5Z M5.5,10.2L8.6,10.2L10,7.4L12.3,14.4L13.8,10.2L18.5,10.2L18.5,11.8L14.9,11.8L12.2,18.2L9.9,11.2L9.6,11.8L5.5,11.8Z" />
+</vector>
