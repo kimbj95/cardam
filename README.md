@@ -5,7 +5,7 @@
 ## 프로젝트 소개
 카담은 계기판 경고등이 켜지는 순간 무슨 뜻인지, 계속 주행해도 되는지를 음성으로 먼저 안내하고, 경고등이 켜진 순간의 차량 상태를 기록해 정비소에서 그대로 보여 줄 수 있게 하는 차량용 앱입니다. 경고등 설명은 현대자동차 그랜저(GN7) 2026 취급설명서를 요약해 사용합니다.
 
-본 프로젝트는 현대자동차그룹 차량용 앱 개발 공모전(Code your App into Pleos App Market) 출품작입니다.
+본 프로젝트는 현대자동차그룹 차량용 앱 개발 공모전(Code your App into Pleos App Market) 출품작입니다(팀 풀에포트).
 
 ## 주요 기능
 | 핵심 기능 | 내용 |
@@ -57,8 +57,8 @@
 | 설명 화면 | 자막, 장면 제목, 차량 신호 패널, 경고등 위치 표시는 이해를 돕기 위해 덧붙인 화면입니다. |
 
 ## 실행 방법 (APK)
-- APK 파일: `apk/` 폴더 (서명된 release 빌드, 제출 전 추가 예정)
-1. 설치: `adb install -r <APK 파일>`
+- APK 파일: [apk/풀에포트_카담_release.apk](apk/풀에포트_카담_release.apk) (서명된 release 빌드)
+1. 설치: `adb install -r apk/풀에포트_카담_release.apk`
 2. 권한 허용 (첫 실행 때 표시되는 창에서 허용해도 됩니다)
    ```
    adb shell pm grant --user 10 app.cardam android.car.permission.CAR_SPEED
@@ -67,6 +67,7 @@
    ```
 3. 실행: `adb shell am start --user 10 -n app.cardam/.MainActivity`
 - 한 번 실행한 뒤에는 부팅할 때마다 서비스가 자동으로 시작됩니다.
+- 디버그 빌드가 설치되어 있으면 서명이 달라 덮어 설치되지 않습니다. `adb uninstall app.cardam` 후 설치합니다.
 
 ## 테스트 환경 및 설정
 - 테스트 환경: Pleos Connect Emulator v2.1.0 (Android Automotive OS, Android 14). 설치 방법은 [Pleos Connect 개발 환경 설정 가이드](https://document.pleos.ai/docs/connect/guide/getting-started/application-development/setup-connect-sdk-emulator)를 따릅니다.
@@ -117,4 +118,5 @@ adb shell am broadcast --user 10 -a app.cardam.DEMO -n app.cardam/.DemoReceiver 
 | `app/src/main/java/.../navi` | 내비게이션 연동 |
 | `app/src/main/java/.../data` | 경고등 사전, 정비소 위치 |
 | `app/src/main/assets` | 경고등 사전(취급설명서 요약), 정비소 위치, 시연용 대답 음성, 글꼴과 라이선스 |
+| `apk/` | 제출용 release APK (`풀에포트_카담_release.apk`) |
 | `docs/` | 검증 결과, 화면 캡처, 시연 영상 |
