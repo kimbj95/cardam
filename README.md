@@ -119,4 +119,4 @@ adb shell am broadcast --user 10 -a app.cardam.DEMO -n app.cardam/.DemoReceiver 
 | `app/src/main/java/.../data` | 경고등 사전, 정비소 위치 |
 | `app/src/main/assets` | 경고등 사전(취급설명서 요약), 정비소 위치, 시연용 대답 음성, 글꼴과 라이선스 |
 | `apk/` | 제출용 release APK (`풀에포트_카담_release.apk`) |
-| `docs/` | 검증 결과, 화면 캡처, 시연 영상 |
+| `docs/` | 검증 결과, 화면 캡처, 시연 영상, 기획서 출처(`sources.md`) |
